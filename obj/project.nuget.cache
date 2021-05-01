@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "UTxyjGTspQc8l+0g8TJfWfj6ktrxmv7tLoQjELlI63zeaTsTycpa28soC4VPruM27iHyFySpn/noR2Q1xtbysw==",
   "success": true,
   "projectFilePath": "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/Sistema-de-Registro-de-Estudiantes.csproj",
@@ -113,5 +114,11 @@
     "/home/elias/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/elias/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "KxdI18K8pUiEvF8qEbgD5KtaR+NmHqb6g4DmdQK/+twtHTjbXS2RAuMlMBa35maRa4qPWXBay4GAWihGIB7AEQ==",
+  "success": true,
+  "projectFilePath": "E:\\cuarto_semestre\\programacionNET\\ProyectoEquipo\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 70bcf7d824bac83f2710b641b8e85f30470a9575
   "logs": []
 }
