@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/elias/.dotnet/store/|arch|/|tfm|",
+      "/home/elias/.nuget/packages"
+    ]
+  }
+}

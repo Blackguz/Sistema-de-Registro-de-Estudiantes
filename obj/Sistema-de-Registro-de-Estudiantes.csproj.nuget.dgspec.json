@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/Sistema-de-Registro-de-Estudiantes.csproj": {}
   },
   "projects": {
@@ -16,23 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/elias/.nuget/NuGet/NuGet.Config"
-=======
-    "E:\\cuarto_semestre\\programacionNET\\ProyectoEquipo\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj": {}
-  },
-  "projects": {
-    "E:\\cuarto_semestre\\programacionNET\\ProyectoEquipo\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\cuarto_semestre\\programacionNET\\ProyectoEquipo\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj",
-        "projectName": "Sistema-de-Registro-de-Estudiantes",
-        "projectPath": "E:\\cuarto_semestre\\programacionNET\\ProyectoEquipo\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj",
-        "packagesPath": "C:\\Users\\leo_c\\.nuget\\packages\\",
-        "outputPath": "E:\\cuarto_semestre\\programacionNET\\ProyectoEquipo\\Sistema-de-Registro-de-Estudiantes\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\leo_c\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> 70bcf7d824bac83f2710b641b8e85f30470a9575
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -79,11 +61,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/home/elias/.dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
->>>>>>> 70bcf7d824bac83f2710b641b8e85f30470a9575
         }
       }
     }
