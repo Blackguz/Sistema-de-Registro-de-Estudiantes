@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joseph\\Documents\\Programacion.Net\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj": {}
+    "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/Sistema-de-Registro-de-Estudiantes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joseph\\Documents\\Programacion.Net\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj": {
+    "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/Sistema-de-Registro-de-Estudiantes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joseph\\Documents\\Programacion.Net\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj",
+        "projectUniqueName": "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/Sistema-de-Registro-de-Estudiantes.csproj",
         "projectName": "Sistema-de-Registro-de-Estudiantes",
-        "projectPath": "C:\\Users\\Joseph\\Documents\\Programacion.Net\\Sistema-de-Registro-de-Estudiantes\\Sistema-de-Registro-de-Estudiantes.csproj",
-        "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joseph\\Documents\\Programacion.Net\\Sistema-de-Registro-de-Estudiantes\\obj\\",
+        "projectPath": "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/Sistema-de-Registro-de-Estudiantes.csproj",
+        "packagesPath": "/home/elias/.nuget/packages/",
+        "outputPath": "/home/elias/Projects/Sistema-de-Registro-de-Estudiantes/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/home/elias/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +37,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/elias/.dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
