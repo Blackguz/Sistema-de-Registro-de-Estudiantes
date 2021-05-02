@@ -65,6 +65,21 @@
 .main > .columna-derecha > .nav-bar {
 	width: 100%;
 	height: 50px;
+	background-color: #f2f2f2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0 20px;
+}
+
+.main > .columna-derecha > .nav-bar > .user-bar {
+	display: flex;
+	align-items: center;
+}
+
+.main > .columna-derecha > .nav-bar > .user-bar > img {
+	border-radius: 50%;
+	margin-right: 10px;
 }
 
 .main > .columna-derecha > .area-contenido {
