@@ -19,10 +19,32 @@
 	background-color: white;
 }
 
-.main > .barra-navegacion {
-	width: 20%;
-	max-width: 170px;
+    .main > .barra-navegacion {
+        width: 20%;
+        max-width: 200px;
+        background-color: Highlight;
+    }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: Highlight;
+    border: 1px solid #555;
 }
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color on hover */
+    li a:hover {
+        background-color: #555;
+        color: white;
+    }
 
 .main > .columna-derecha {
 	min-height: 100vh;
