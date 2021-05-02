@@ -22,14 +22,14 @@
     .main > .barra-navegacion {
         width: 20%;
         max-width: 200px;
-        background-color: Highlight;
+        background-color: #0398fc;
     }
         .main > .barra-navegacion ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 200px;
-            background-color: Highlight;
+            width: 100%;
+       
             border: 1px solid #555;
         }
 
@@ -46,13 +46,9 @@
         color: white;
     }
 
-        .main > .barra-navegacion > .avatar {
-            width: 100px;
+        .main > .barra-navegacion > .avatar { 
             height: 100px;
             border-radius: 50%;
-            position: absolute;
-            top: -50px;
-            left: calc(50% - 50px);
         }
 
 .main > .columna-derecha {
