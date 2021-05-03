@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Sistema_de_Registro_de_Estudiantes</title>
+	<link rel="stylesheet" href="~/css/main.css" />
+
+</head>
+
+<body>
+	<div class="main">
+		<div class="barra-navegacion">
+			<div class="image-container">
+				<img src="~/images/Escudo_UAZ.jpg" class="avatar" alt="Avatar Image">
+			</div>
+			<ul>
+				<li><a href="#">Mi matricula </a></li>
+				<li><a href="#">Mis documentos</a></li>
+				<li><a href="#">Realizar Pago</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Horarios </a></li>
+				<li><a href="#">Moodle</a></li>
+				<li><a href="#">Materias</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Becas </a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Mi cuenta </a></li>
+				<li><a href="#">Correo Institucional</a></li>
+				<li><a href="#">Ayuda</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Salir </a></li>
+			</ul>
+		</div>
+		<div class="columna-derecha">
+			<div class="nav-bar">
+				<div class="user-bar">
+					<img src="~/images/guts.jpeg" width="40px" height="40px" />
+					<p>El tripas griiifiiith noooo</p>
+				</div>
+			</div>
+
+			<div class="area-contenido">
+				@RenderBody()
+			</div>
+		</div>
+	</div>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
