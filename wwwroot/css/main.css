@@ -22,15 +22,14 @@
     .main > .barra-navegacion {
         width: 25%;
         max-width: 200px;
-        background-color: #0398fc;
+        background-color: #447BD8;
     }
         .main > .barra-navegacion ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             width: 100%;
-       
-            border: 1px solid #555;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
         }
 
         .main > .barra-navegacion li a {
@@ -43,13 +42,13 @@
     /* Change the link color on hover */
     .main > .barra-navegacion li a:hover {
         color: white;
-				background-color: rgba(255, 255, 255, 0.2);
+	        background-color: rgba(255, 255, 255, 0.2);
     }
 
         .main > .barra-navegacion > .image-container { 
-					width: 100%;
-					display: flex;
-					justify-content: center;
+			width: 100%;
+		    display: flex;
+			justify-content: center;
         }
 
         .main > .barra-navegacion > .image-container > .avatar { 
