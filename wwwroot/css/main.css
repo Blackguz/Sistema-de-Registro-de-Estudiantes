@@ -49,6 +49,8 @@
 					width: 100%;
 					display: flex;
 					justify-content: center;
+					padding: 20px 0px;
+          border-bottom: 3px solid rgba(255, 255, 255, 0.2);
         }
 
         .main > .barra-navegacion > .image-container > .avatar { 
