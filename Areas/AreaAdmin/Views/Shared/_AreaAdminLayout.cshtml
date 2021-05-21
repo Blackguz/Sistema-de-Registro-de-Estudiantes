@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>@ViewData["Title"] - Sistema_de_Registro_de_Estudiantes</title>
 	<link rel="stylesheet" href="~/css/main.css" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -17,25 +18,19 @@
 				<img src="~/images/Escudo_UAZ.jpg" class="avatar" alt="Avatar Image">
 			</div>
 			<ul>
-				<li><a href="#">Mi matricula </a></li>
-				<li><a href="#">Mis documentos</a></li>
-				<li><a href="#">Realizar Pago</a></li>
+				<li><a asp-area="AreaAdmin" asp-controller="AreaAdmin" asp-action="Index">Mi cuenta</a></li>
+				<li><a href="#">Reinscripción</a></li>
 			</ul>
 			<ul>
 				<li><a href="#">Horarios </a></li>
-				<li><a href="#">Moodle</a></li>
+				<li><a href="https://ingsoftware.reduaz.mx/moodle/course/" target="_blank">Moodle</a></li>
 				<li><a href="#">Materias</a></li>
 			</ul>
 			<ul>
-				<li><a href="#">Becas</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Mi cuenta </a></li>
 				<li><a href="#">Correo Institucional</a></li>
-				<li><a href="#">Ayuda</a></li>
 			</ul>
 			<ul>
-				<li><a href="#">Salir</a></li>
+				<li><a asp-area="" asp-controller="Home" asp-action="Index">Salir</a></li>
 			</ul>
 		</div>
 		<div class="columna-derecha">

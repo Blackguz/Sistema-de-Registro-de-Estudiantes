@@ -13,5 +13,10 @@ namespace Sistema_de_Registro_de_Estudiantes.Areas.AreaAdmin.Controllers
         {
             return View();
         }
+
+        public IActionResult ListaMaterias()
+        {
+            return View();
+        }
     }
 }
