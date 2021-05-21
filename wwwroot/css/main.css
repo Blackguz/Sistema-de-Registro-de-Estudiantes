@@ -19,8 +19,7 @@
 }
 
 .main > .barra-navegacion {
-	width: 25%;
-	max-width: 200px;
+	width: 200px;
 	background-color: #447bd8;
 	height: 100vh;
 	position: relative;
@@ -98,6 +97,10 @@
 .main > .columna-derecha > .nav-bar > .user-bar {
 	display: flex;
 	align-items: center;
+}
+
+.main > .columna-derecha > .nav-bar > .user-bar > p {
+	margin: auto;
 }
 
 .main #hide-menu {
