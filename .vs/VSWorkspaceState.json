@@ -1,7 +1,20 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
+    "\\Areas",
+    "\\Areas\\AreaAdmin",
+    "\\Controllers",
+    "\\Models",
+    "\\Properties",
+    "\\Views",
+    "\\Views\\Home",
+    "\\Views\\Login"
+  ],
+  "SelectedNode": "\\Startup.cs",
+=======
     "\\Views\\Home"
   ],
+>>>>>>> 6c3a32120e2d5fcef1fc12e2717a43ac5f78a12e
   "PreviewInSolutionExplorer": false
 }
