@@ -2,96 +2,112 @@
     ViewData["Title"] = "Home Page";
     Layout = null;
 }
-<link rel="stylesheet" href="~/css/hommie.css" />
-<body>
-    <section id="pagSections">
-        <div class="izq">
-            <div class="container">
-                <div class="rectangle">
-                   
-                    <h1>Estudiantes</h1>  
-                  
-                    
-                </div>
-                <img src="~/images/alumno3.jpg" alt="Avatar" class="image">
-                <div class="overlay">
+<html>
+<head>
 
-                    <div class="text">
-                        <h1>Estudiantes</h1>
-                        <p>
-                            Nunc ac auctor risus, eget efficitur est. Nullam orci nibh, aliquet et volutpat eget, aliquam ac nulla. Nunc eget augue in eros accumsan fringilla. Donec rutrum ante mauris, ut tristique nisl laoreet a. Nunc in odio vel sapien elementum scelerisque sed sed felis. Vivamus dapibus rhoncus condimentum. Nullam dapibus quis justo eget tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ut convallis risus. Vivamus elementum in tortor vel pharetra. Donec vestibulum convallis efficitur. Sed efficitur neque arcu, quis commodo felis tincidunt sit amet. Etiam bibendum vestibulum accumsan.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cent">
-            <div class="container">
-                <div class="rectangle">
-                    <h1>Login</h1>
-                        
-              
-                    
-                </div>
-                <img src="~/images/alumno1.jpg" alt="Avatar" class="image">
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-                <a class="overlay" asp-area="" asp-controller="Login" asp-action="Index">
-                    <div class="text">
-                        <h1>
-                            Login
-                        </h1>
-                        <p>
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In cursus lorem sit amet finibus blandit. In eget nulla a nibh sodales sodales. Phasellus vel mi nisl. Donec non interdum lectus. Aenean semper massa eget risus pretium, eu tincidunt nisi volutpat. In hac habitasse platea dictumst. Sed interdum, metus eget ullamcorper lobortis, nunc sapien pharetra tellus, quis luctus lorem sapien eu orci. Proin et auctor erat, vel dignissim urna. Curabitur vitae ultricies odio, posuere tempor neque. Aliquam vitae venenatis erat, in ornare urna. Suspendisse dapibus nunc ipsum, quis posuere ante venenatis vitae. Curabitur tortor dolor, imperdiet ac sapien sit amet, suscipit sodales lorem.
-                        </p>
-                    </div>
-                </a>
-            </div>
+    <title>Sistema de Registro de estudiantes</title>
+
+    <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-4de243a40619a967c0bf13b95e1ac6f8de89d943b7fc8710de33f681fe287604.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/hommie.css" />
+</head>
+
+<body onLoad="talk()">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>$("#open-overlay").trigger('click');</script>
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#" data-content="orem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor urna, ullamcorper ut condimentum eget, ornare non ipsum.">Estudiantes</a></li>
+                <li><a href="#" data-content="Pellentesque pretium nisl vel interdum ultrices. In ac metus id purus vestibulum tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Nuevo ingreso</a></li>
+                <li><a href="#" data-content="A partir del segundo semestre 2021">Servicio social</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="home">
+
+        <div id="open-overlay" class="open-overlay">
 
         </div>
-        <div class="der">
-            <div class="container">
-                <div class="rectangle">
-                    <h1> Servicio Social</h1>
-                        
-                  
-                    </div>
-                <img src="~/images/alumno2.jpg" alt="Avatar" class="image">
+    </section>
 
-                <div class="overlay">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js'></script>
+    <script id="rendered-js">
+        function talk() {
+            $('.open-overlay').css('pointer-events', 'none');
+            var overlay_navigation = $('.overlay-navigation'),
+                top_bar = $('.bar-top'),
+                middle_bar = $('.bar-middle'),
+                bottom_bar = $('.bar-bottom');
 
-                    <div class="text">
-                        <h1> Servicio Social</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In auctor a arcu et dapibus. Maecenas nec dolor porttitor, consequat tortor a, convallis orci. Morbi venenatis sapien quis tempus dapibus. Nullam vestibulum nulla nec purus dapibus pellentesque sit amet ut mauris. Curabitur viverra metus posuere, faucibus nulla eu, porttitor sapien. Nullam eu lectus nec ipsum malesuada aliquam. Donec tellus dolor, consectetur hendrerit odio eu, congue tincidunt nunc. Curabitur interdum, tortor a accumsan fermentum, libero justo pellentesque eros, quis dictum risus felis nec massa. Sed sagittis tellus mi, ac auctor elit imperdiet id.
-                        </p>
+            overlay_navigation.toggleClass('overlay-active');
+            if (overlay_navigation.hasClass('overlay-active')) {
 
-                    </div>
-                </div>
+                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down');
+                overlay_navigation.velocity('transition.slideLeftIn', {
+                    duration: 300,
+                    delay: 0,
+                    begin: function () {
+                        $('nav ul li').velocity('transition.perspectiveLeftIn', {
+                            stagger: 150,
+                            delay: 0,
+                            complete: function () {
+                                $('nav ul li a').velocity({
+                                    opacity: [1, 0]
+                                },
+                                    {
+                                        delay: 10,
+                                        duration: 140
+                                    });
 
-            </div>
-        </div>
+                                $('.open-overlay').css('pointer-events', 'auto');
+                            }
+                        });
 
-</section>
+                    }
+                });
+
+
+            } else {
+                top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down');
+                overlay_navigation.velocity('transition.slideLeftIn', {
+                    duration: 300,
+                    delay: 0,
+                    begin: function () {
+                        $('nav ul li').velocity('transition.perspectiveLeftIn', {
+                            stagger: 150,
+                            delay: 0,
+                            complete: function () {
+                                $('nav ul li a').velocity({
+                                    opacity: [1, 0]
+                                },
+                                    {
+                                        delay: 10,
+                                        duration: 140
+                                    });
+
+                                $('.open-overlay').css('pointer-events', 'auto');
+                            }
+                        });
+
+                    }
+                });
+
+
+            }
+        };
+    </script>
 </body>
+</html>
 
-<!--
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="AreaAdmin" asp-controller="AreaAdmin" asp-action="Index">AreaAdmin</a>
-        </li>
-    </ul>
-
-</div>
- -->
