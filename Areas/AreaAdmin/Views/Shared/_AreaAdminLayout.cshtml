@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@model Sistema_de_Registro_de_Estudiantes.Models.Alumno
+
+@{
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,7 +35,7 @@
 				<li><a href="#">Correo Institucional</a></li>
 			</ul>
 			<ul>
-				<li><a asp-area="" asp-controller="Home" asp-action="Index">Salir</a></li>
+				<li><a asp-area="AreaAdmin" asp-controller="AreaAdmin" asp-action="Salir">Salir</a></li>
 			</ul>
 		</div>
 		<div class="columna-derecha">
@@ -42,7 +47,7 @@
 				</label>
 				<div class="user-bar">
 					<img src="~/images/guts.jpeg" width="40px" height="40px" />
-					<p>El tripas griiifiiith noooo</p>
+					<p>@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apaterno)</p>
 				</div>
 			</div>
 

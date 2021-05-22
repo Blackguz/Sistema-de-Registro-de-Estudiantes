@@ -52,6 +52,10 @@ namespace Sistema_de_Registro_de_Estudiantes.Models
                     .HasColumnName("MATRICULA")
                     .IsFixedLength(true);
 
+                entity.Property(e => e.Password)
+                    .HasMaxLength(50)
+                    .HasColumnName("PASSWORD");
+
                 entity.Property(e => e.Amaterno)
                     .HasMaxLength(30)
                     .HasColumnName("AMATERNO");
@@ -67,7 +71,6 @@ namespace Sistema_de_Registro_de_Estudiantes.Models
                     .HasColumnName("CARRERA");
 
                 entity.Property(e => e.Foto)
-                    .IsRequired()
                     .HasColumnName("FOTO");
 
                 entity.Property(e => e.Grupo)

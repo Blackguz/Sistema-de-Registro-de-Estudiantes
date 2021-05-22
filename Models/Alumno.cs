@@ -14,6 +14,7 @@ namespace Sistema_de_Registro_de_Estudiantes.Models
         }
 
         public string Matricula { get; set; }
+        public string Password { get; set; }
         public string Nombre { get; set; }
         public string Apaterno { get; set; }
         public string Amaterno { get; set; }

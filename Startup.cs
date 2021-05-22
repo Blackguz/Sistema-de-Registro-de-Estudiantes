@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Sistema_de_Registro_de_Estudiantes.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sistema_de_Registro_de_Estudiantes
 {
@@ -23,7 +25,20 @@ namespace Sistema_de_Registro_de_Estudiantes
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+						services.AddDistributedMemoryCache();
+
+						services.AddSession(options =>
+						{
+								options.Cookie.Name = ".AdventureWorks.Session";
+								options.IdleTimeout = TimeSpan.FromSeconds(100);
+								options.Cookie.IsEssential = true;
+						});
+
             services.AddControllersWithViews();
+						services.AddDbContext<RegistroEstudiantesContext>(options =>
+								options.UseSqlServer(
+										Configuration.GetConnectionString("AuyhDbContextConnection")));
+
             services.AddRazorPages();
         }
 
@@ -46,6 +61,8 @@ namespace Sistema_de_Registro_de_Estudiantes
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+						app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
