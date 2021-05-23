@@ -53,16 +53,36 @@ namespace Sistema_de_Registro_de_Estudiantes.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register([Bind("Matricula,Nombre,Apaterno,Amaterno,Telefono,Grupo,Semestre,Carrera,Password")] Alumno alumno)
+        public async Task<IActionResult> Register([Bind("Matricula,Nombre,Apaterno,Amaterno,Telefono,Grupo,Semestre,Carrera,Password,ConfirmPassword")] Alumno alumno)
         {
 						if (ModelState.IsValid)
 						{
-								_context.Add(alumno);
-								await _context.SaveChangesAsync();
-								return RedirectToAction("Index");
-						}
+								try
+								{
+										_context.Add(alumno);
+										await _context.SaveChangesAsync();
+										return RedirectToAction("Index");
+								}
+								catch (Microsoft.EntityFrameworkCore.DbUpdateException)
+								{
+										var matriculaRepetida = await _context.Alumnos.
+											FirstOrDefaultAsync(m => m.Matricula == alumno.Matricula);
 
-						return View();
+										if (matriculaRepetida != null) {
+												ModelState.AddModelError("Matricula", "Matricula ya registrada");
+										}
+
+										var telefonoRepetido = await _context.Alumnos.
+											FirstOrDefaultAsync(m => m.Telefono == alumno.Telefono);
+
+										if (telefonoRepetido != null) {
+												ModelState.AddModelError("Telefono", "Telefono ya registrado");
+										}
+
+										return View(alumno);
+								}
+						}
+						return View(alumno);
         }
     }
 }

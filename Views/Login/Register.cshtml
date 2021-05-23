@@ -11,7 +11,8 @@
     <meta charset="UTF-8">
     <!---<title> Responsive Registration Form | CodingLab </title>--->
     <link rel="stylesheet" href="~/css/style.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
   <div class="container">
@@ -70,16 +71,22 @@
           <div class="input-box">
             <!-- PASSWORD INPUT -->
 						<label asp-for="Password" class="control-label"></label>
-						<input asp-for="Password" type="password"  class="form-control" />
+						<input asp-for="Password" id="password" type="password" onkeyup="validar_password()" class="form-control" />
             <span asp-validation-for="Password" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- ConfirmPASSWORD INPUT -->
+						<label class="control-label"></label>
+						<input type="password" id="confirm_password" onkeyup="validar_password()" class="form-control" />
+            <span class="text-danger" id="mensaje_error"></span>
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Register">
+          <input type="submit" id="submit_button" value="Register">
         </div>
       </form>
     </div>
   </div>
-
+<script src="~/js/register.js"></script>
 </body>
 </html>
