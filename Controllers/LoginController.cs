@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 using Sistema_de_Registro_de_Estudiantes.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Sistema_de_Registro_de_Estudiantes.Controllers
 {
     public class LoginController : Controller
     {
         private readonly RegistroEstudiantesContext _context;
+				private IWebHostEnvironment _environment;
 
-				public LoginController(RegistroEstudiantesContext context)
+				public LoginController(RegistroEstudiantesContext context, IWebHostEnvironment environment)
 				{
 						_context = context;
+						_environment = environment;
 				}
 
         public IActionResult Index()
@@ -53,7 +57,7 @@ namespace Sistema_de_Registro_de_Estudiantes.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register([Bind("Matricula,Nombre,Apaterno,Amaterno,Telefono,Grupo,Semestre,Carrera,Password,ConfirmPassword")] Alumno alumno)
+        public async Task<IActionResult> Register([Bind("Matricula,Nombre,Apaterno,Amaterno,Telefono,Grupo,Semestre,Carrera,Password,ConfirmPassword")] Alumno alumno, List<IFormFile> postedFiles)
         {
 						if (ModelState.IsValid)
 						{
@@ -62,6 +66,14 @@ namespace Sistema_de_Registro_de_Estudiantes.Controllers
 										_context.Add(alumno);
 										await _context.SaveChangesAsync();
 										HttpContext.Session.SetString("Matricula", alumno.Matricula);
+										string path = Path.Combine(_environment.WebRootPath, "fotos");
+										foreach (IFormFile postedFile in postedFiles)
+										{
+												using (FileStream stream = new FileStream(Path.Combine(path, alumno.Matricula + ".png"), FileMode.Create))
+												{
+														postedFile.CopyTo(stream);
+												}
+										}
 										return RedirectToAction("Index");
 								}
 								catch (Microsoft.EntityFrameworkCore.DbUpdateException)
