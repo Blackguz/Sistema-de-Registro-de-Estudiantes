@@ -45,5 +45,24 @@ namespace Sistema_de_Registro_de_Estudiantes.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public IActionResult Register()
+        {
+						return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register([Bind("Matricula,Nombre,Apaterno,Amaterno,Telefono,Grupo,Semestre,Carrera,Password")] Alumno alumno)
+        {
+						if (ModelState.IsValid)
+						{
+								_context.Add(alumno);
+								await _context.SaveChangesAsync();
+								return RedirectToAction("Index");
+						}
+
+						return View();
+        }
     }
 }

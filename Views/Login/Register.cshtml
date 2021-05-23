@@ -1,0 +1,85 @@
+﻿@model Sistema_de_Registro_de_Estudiantes.Models.Alumno
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="~/css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form asp-action="Register">
+        <div class="user-details">
+          <div class="input-box">
+            <!-- Matricula INPUT -->
+						<label asp-for="Matricula" class="control-label"></label>
+						<input asp-for="Matricula" class="form-control" />
+            <span asp-validation-for="Matricula" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Nombre INPUT -->
+						<label asp-for="Nombre" class="control-label"></label>
+						<input asp-for="Nombre" class="form-control" />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Apaterno INPUT -->
+						<label asp-for="Apaterno" class="control-label"></label>
+						<input asp-for="Apaterno" class="form-control" />
+            <span asp-validation-for="Apaterno" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Amaterno INPUT -->
+						<label asp-for="Amaterno" class="control-label"></label>
+						<input asp-for="Amaterno" class="form-control" />
+            <span asp-validation-for="Amaterno" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Telefono INPUT -->
+						<label asp-for="Telefono" class="control-label"></label>
+						<input asp-for="Telefono" class="form-control" />
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Grupo INPUT -->
+						<label asp-for="Grupo" class="control-label"></label>
+						<input asp-for="Grupo"  class="form-control" />
+            <span asp-validation-for="Grupo" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Semestre INPUT -->
+						<label asp-for="Semestre" class="control-label"></label>
+						<input asp-for="Semestre"  class="form-control" />
+            <span asp-validation-for="Semestre" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- Carrera INPUT -->
+						<label asp-for="Carrera" class="control-label"></label>
+						<input asp-for="Carrera"  class="form-control" />
+            <span asp-validation-for="Carrera" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <!-- PASSWORD INPUT -->
+						<label asp-for="Password" class="control-label"></label>
+						<input asp-for="Password" type="password"  class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
