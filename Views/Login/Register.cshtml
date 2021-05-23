@@ -18,7 +18,7 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form asp-action="Register">
+      <form method="post" enctype="multipart/form-data" asp-action="Register">
         <div class="user-details">
           <div class="input-box">
             <!-- Matricula INPUT -->
@@ -69,6 +69,11 @@
             <span asp-validation-for="Carrera" class="text-danger"></span>
           </div>
           <div class="input-box">
+            <!-- Foto input -->
+						<label for="postedFiles" class="control-label">Fotografía</label>
+						<input name="postedFiles" id="postedFiles" type="file" class="form-control" />
+          </div>
+          <div class="input-box">
             <!-- PASSWORD INPUT -->
 						<label asp-for="Password" class="control-label"></label>
 						<input asp-for="Password" id="password" type="password" onkeyup="validar_password()" class="form-control" />
@@ -76,7 +81,7 @@
           </div>
           <div class="input-box">
             <!-- ConfirmPASSWORD INPUT -->
-						<label class="control-label"></label>
+						<label class="control-label">Confirmar Password</label>
 						<input type="password" id="confirm_password" onkeyup="validar_password()" class="form-control" />
             <span class="text-danger" id="mensaje_error"></span>
           </div>

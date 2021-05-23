@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+@model Sistema_de_Registro_de_Estudiantes.Models.Alumno
 
 <html>
 
@@ -13,16 +13,16 @@
 			<tr>
 				<th>Carrera</th>
 				<th>Semestre</th>
+				<th>Grupo</th>
 				<th>Estado</th>
-				<th>Tipo de estudiante</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td>Ingeniería de Software</td>
-				<td>01</td>
+				<td>@Html.DisplayFor(model => model.Carrera)</td>
+				<td>@Html.DisplayFor(model => model.Semestre)</td>
+				<td>@Html.DisplayFor(model => model.Grupo)</td>
 				<td><i class="fa fa-check"></i></td>
-				<td>Regular</td>
 			</tr>
 		</tbody>
 	</table>

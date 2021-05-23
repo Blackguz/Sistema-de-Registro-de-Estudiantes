@@ -3,6 +3,8 @@
 @{
 }
 
+@{string rutaImagen = Model.Matricula + ".png";}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +48,7 @@
 					<i class="fa fa-th-large hidden" style="font-size:24px"></i>
 				</label>
 				<div class="user-bar">
-					<img src="~/images/guts.jpeg" width="40px" height="40px" />
+					<img src="~/fotos/@rutaImagen" width="40px" height="40px" />
 					<p>@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apaterno)</p>
 				</div>
 			</div>
