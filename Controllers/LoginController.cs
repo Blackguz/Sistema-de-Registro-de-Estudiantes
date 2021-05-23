@@ -61,6 +61,7 @@ namespace Sistema_de_Registro_de_Estudiantes.Controllers
 								{
 										_context.Add(alumno);
 										await _context.SaveChangesAsync();
+										HttpContext.Session.SetString("Matricula", alumno.Matricula);
 										return RedirectToAction("Index");
 								}
 								catch (Microsoft.EntityFrameworkCore.DbUpdateException)
