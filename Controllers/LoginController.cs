@@ -67,6 +67,7 @@ namespace Sistema_de_Registro_de_Estudiantes.Controllers
 										await _context.SaveChangesAsync();
 										HttpContext.Session.SetString("Matricula", alumno.Matricula);
 										string path = Path.Combine(_environment.WebRootPath, "fotos");
+										System.IO.Directory.CreateDirectory(path);
 										foreach (IFormFile postedFile in postedFiles)
 										{
 												using (FileStream stream = new FileStream(Path.Combine(path, alumno.Matricula + ".png"), FileMode.Create))
